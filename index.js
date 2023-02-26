@@ -1,8 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateProfile = require("./generateProfile");
-
+const generateProfile = require("./dist/generateProfile");
 
 
 
