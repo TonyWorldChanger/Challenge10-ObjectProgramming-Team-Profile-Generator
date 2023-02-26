@@ -16,29 +16,32 @@ class Employee {
 };
 
 class Manager {
-    constructor(name, id, email, role) {
+    constructor(name, id, email, role, officeNumber) {
         this.name = name;
         this.id = id;
         this.email = email;
         this.role = role;
+        this.officeNumber = officeNumber;
     }
 };
 
 class Engineer {
-    constructor(name, id, email, role) {
+    constructor(name, id, email, role, github) {
         this.name = name;
         this.id = id;
         this.email = email;
         this.role = role;
+        this.github = github;
     }
 };
 
 class Intern {
-    constructor(name, id, email, role) {
+    constructor(name, id, email, role, school) {
         this.name = name;
         this.id = id;
         this.email = email;
         this.role = role;
+        this.school = school;
     }
 };
 
@@ -48,33 +51,23 @@ class Intern {
 const questions = [
     {
        type:"input",
-       name:"Title",
-       message:"What is the your project's title?", 
+       name:"name",
+       message:"What is the employee's name?", 
     },
     {
         type:"input",
-        name:"Installation",
-        message:"How do you install your application?", 
+        name:"id",
+        message:"What is the employee's ID?", 
      },
      {
         type:"input",
-        name:"Instructions",
-        message:"What instructions does the user need to follow?", 
+        name:"email",
+        message:"What is the employee's email?", 
      },
      {
         type:"input",
-        name:"Usage",
-        message:"How to use this app?", 
-     },
-     {
-        type:"input",
-        name:"Credits",
-        message:"Do you have any credits to add?", 
-     },
-     {
-        type:"input",
-        name:"License",
-        message:"What liscense did you use?", 
+        name:"role",
+        message:"What is the employee's rofle?", 
      },
      {
         type:"input",
@@ -83,10 +76,9 @@ const questions = [
      },
      {
         type:"input",
-        name:"E-mail",
-        message:"Email",
+        name:"school",
+        message:"What school does the employee attend?",
      },
-
 ];
 
 // TODO: Create a function to write README file
