@@ -74,4 +74,5 @@ const generateTeam = team => {
       </div>
     </div>
     `;
-}
+  };
+};
