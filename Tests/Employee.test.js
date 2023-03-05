@@ -1,3 +1,6 @@
+const Employee = require("../lib/Employee");
+
+
 class Employee {
     constructor(name, id, email, role) {
         this.name = name;

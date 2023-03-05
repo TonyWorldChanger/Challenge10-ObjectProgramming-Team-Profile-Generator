@@ -76,3 +76,5 @@ const generateTeam = team => {
     `;
   };
 };
+
+moduel.exports = generateTeam();

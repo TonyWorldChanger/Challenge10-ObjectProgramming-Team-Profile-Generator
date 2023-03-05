@@ -1,3 +1,5 @@
+const Engineer = require("../lib/Engineer");
+
 class Engineer {
     constructor(name, id, email, role, github) {
         this.name = name;

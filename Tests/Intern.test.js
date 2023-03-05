@@ -1,3 +1,5 @@
+const Intern = require("../lib/Intern");
+
 class Intern {
     constructor(name, id, email, role, school) {
         this.name = name;
@@ -17,3 +19,5 @@ class Intern {
             expect(intern.school).toEqual("University of Wick");
         });
      });
+
+     

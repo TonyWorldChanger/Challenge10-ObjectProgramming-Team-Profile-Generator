@@ -1,3 +1,5 @@
+const Manager = require("../lib/Manager");
+
 class Manager {
     constructor(name, id, email, role, officeNumber) {
         this.name = name;

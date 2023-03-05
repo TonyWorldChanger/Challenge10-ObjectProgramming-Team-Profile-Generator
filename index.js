@@ -1,112 +1,9 @@
+
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
-const generateProfile = require("./dist/generateProfile");
-
-
-
-class Employee {
-    constructor(name, id, email, role) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.role = role;
-    }
-    getName() {
-        return this.name;
-    }
-    getID() {
-        return this.id;
-    }
-    getEmail() {
-        return this.email;
-    }
-    getRole() {
-        return "Employee";
-    }
-};
-
-
-
-class Manager {
-    constructor(name, id, email, role, officeNumber) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.role = role;
-        this.officeNumber = officeNumber;
-    }
-    getName() {
-        return this.name;
-    }
-    getID() {
-        return this.id;
-    }
-    getEmail() {
-        return this.email;
-    }
-    getOfficeNumber() {
-        return this.officeNumber;
-    }
-    getRole() {
-        return "Manger";
-    }
-
-
-};
-
-class Engineer {
-    constructor(name, id, email, role, github) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.role = role;
-        this.github = github;
-    }
-    getName() {
-        return this.name;
-    }
-    getID() {
-        return this.id;
-    }
-    getEmail() {
-        return this.email;
-    }
-    getGitHub() {
-        return this.github;
-    }
-    getRole() {
-        return "Engineer";
-    }
-    
-};
-
-class Intern {
-    constructor(name, id, email, role, school) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.role = role;
-        this.school = school;
-    }
-    getName() {
-        return this.name;
-    }
-    getID() {
-        return this.id;
-    }
-    getEmail() {
-        return this.email;
-    }
-    getschool() {
-        return this.school;
-    }
-    getRole() {
-        return "Intern";
-    }
-};
-
+const generateProfile = require("../dist/generateProfile");
 
 
 // TODO: Create an array of questions for user input
@@ -149,7 +46,7 @@ function writeToFile(fileName, data) {
     }
     fs.writeFileSync(disPath, render(teamMembers), "utf-8");
 
-    return fs.writeFileSync(generateProfile.join(process.cwd(), fileName), data);
+    return fs.writeFileSync(generateProfile.html, fileName), data;
 };
 
 
@@ -167,7 +64,5 @@ init();
 
 
 
-module.exports = Employee;
-module.exports = Manager;
-module.exports = Engineer;
-module.exports = Intern;
+
+
