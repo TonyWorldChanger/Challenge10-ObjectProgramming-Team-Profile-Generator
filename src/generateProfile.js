@@ -1,6 +1,6 @@
 
 
-const generateTeam = team => {
+const generateTeam = (team) => {
   // creates the manager html
   const generateManger = manager => {
     return `
@@ -77,4 +77,3 @@ const generateTeam = team => {
   }
 };
 
-generateTeam();

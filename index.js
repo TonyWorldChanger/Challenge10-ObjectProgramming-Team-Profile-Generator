@@ -2,8 +2,26 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateProfile = require("../dist/generateProfile");
+const generateProfile = require("./src/generateProfile");
+const allUser = [];
 
+const promptUser = () => {
+   inquirer.prompt([
+      {
+         type:"input",
+         name:"name",
+         message:"What is the employee's name?", 
+         validate: nameInput => {
+            if (nameInput) {
+               return true;
+            } else {
+               return false;
+            }
+         }
+      },
+
+   ])
+}
 
 // TODO: Create an array of questions for user input
 const questions = [
