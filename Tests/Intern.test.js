@@ -1,14 +1,5 @@
 const Intern = require("../lib/Intern");
 
-class Intern {
-    constructor(name, id, email, role, school) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.role = role;
-        this.school = school;
-    }
-};
 
  describe("Intern", () => {
         it("returns an object with the properties of Employee, in addition to the Intern properties.", () => {

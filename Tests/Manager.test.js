@@ -1,14 +1,5 @@
 const Manager = require("../lib/Manager");
 
-class Manager {
-    constructor(name, id, email, role, officeNumber) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.role = role;
-        this.officeNumber = officeNumber;
-    }
-};
 
 describe("Manager", () => {
     it("returns an object with the properties of Employee, in addition to the Intern properties.", () => {

@@ -1,15 +1,6 @@
 const Employee = require("../lib/Employee");
 
 
-class Employee {
-    constructor(name, id, email, role) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.role = role;
-    }
-};
-
 describe("Employee", () => {
     it("creates an Employee object with the correct properties", () => {
         const employee = new Employee("John Wick", 1, "johnwick@email.com");

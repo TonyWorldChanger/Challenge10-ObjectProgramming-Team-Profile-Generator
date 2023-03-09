@@ -18,7 +18,7 @@ const generateTeam = team => {
       </div>
     </div>
     `;
-  };
+  }
 
 
 // creates the engineer html
@@ -38,7 +38,7 @@ const generateTeam = team => {
       </div>
     </div>
     `;
-  };
+  }
 
   // creates the employee html
   const generateEmployee = employee => {
@@ -56,7 +56,7 @@ const generateTeam = team => {
       </div>
     </div>
     `;
-  };
+  }
 
   const generateIntern = intern => {
     return `
@@ -74,7 +74,7 @@ const generateTeam = team => {
       </div>
     </div>
     `;
-  };
+  }
 };
 
-moduel.exports = generateTeam;
+generateTeam();
