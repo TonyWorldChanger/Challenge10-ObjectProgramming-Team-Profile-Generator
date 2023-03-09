@@ -1,85 +1,104 @@
 
-* {
-    font-family: 'Poppins', sans-serif;
+*{
+    font-family: 'Kumbh Sans';
+}
+
+html {
     margin: 0;
     padding: 0;
-    text-decoration: none;
+    box-sizing: border-box;
 }
 
-header {
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.header-bar {
+    width: 100vw;
+    height: 13vh;
+    background-color: rgba(236, 63, 63, 0.813);
+    margin-bottom: 4%;
+    padding-bottom: 1.1%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #E34957;
-    color: white;
-    font-size: 30px;
-    height: 120px;
 }
 
-.card-container {
+h1 {
+    margin: 0 auto;
+    color: #fff;
+}
+
+.employee-container {
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.employee-card {
-    display: flex;
-    flex-direction: column;
-    width: 15%;
-    min-width: 300px;
-    margin: 70px 20px 20px 20px;
-    background-color: #EFF1F5;
-    -webkit-box-shadow: 6px 6px 5px 0px rgba(128,128,128,1);
-    -moz-box-shadow: 6px 6px 5px 0px rgba(128,128,128,1);
-    box-shadow: 6px 6px 5px 0px rgba(128,128,128,1);
+.employee-card{
+    height:45%;
+    width: 20%;
+    background-color: #fff;
+    border: 2px solid rgba(71, 69, 69, 0.63);
+    border-radius: 16px;
+    margin-bottom: 12px;
 }
 
-.employee-name {
-    background-color: #0776F4;
-    text-align: left;
-    color: white;
+.employee-card:hover {
+    width: 21%;
+    height: 46%;
+    box-shadow: 5px 8px #797777a7;
+    cursor: pointer;
 }
 
-.employee-name p {
-    margin: 10px 10px;
-    font-size: 25px;
-    font-weight: 500;
+.employee-info {
+    padding-left: 3%;
+    padding-top: 2%;
+    font-size: 0.9em;
 }
 
-.employee-name p i {
-    margin: 0 10px 0 0;
+.title-container{
+    color: #fff;
+    height: auto;
+    text-align: center;
+    background-color: rgba(236, 63, 63, 0.813);
+    border-bottom: 1px solid rgba(97, 94, 94, 0.539);
+    padding-top: 1px;
+    border-radius: 10px 10px 0 0;
 }
 
-.employee-information {
-    padding: 30px 0;
+.title{
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
-.employee-id {
-    background-color: white;
-    margin: 20px 10px 5px 10px;
+.role{
+    font-size: 1.3rem;
+    margin: 0;
+    padding-bottom: 3%;
 }
 
-.employee-id p {
-    margin-left: 10px;
-    padding: 10px 0;
+a:hover {
+    font-size: 1.2rem;
 }
-
-.employee-email {
-    background-color: white;
-    margin: 0px 10px 5px 10px;
-}
-
-.employee-email p {
-    margin-left: 10px;
-    padding: 10px 0;
-}
-
-.additional-info {
-    background-color: white;
-    margin: 0px 10px 5px 10px;
-}
-
-.additional-info p {
-    margin-left: 10px;
-    padding: 10px 0;
-}
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
