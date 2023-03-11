@@ -1,8 +1,9 @@
-
+const html = [];
 
 const generateTeam = (team) => {
+  console.log(team);
   // creates the manager html
-  const generateManger = manager => {
+  const generateManager = manager => {
     return `
     <div class="card employee-card">
      <div class="card-header">
@@ -75,5 +76,23 @@ const generateTeam = (team) => {
     </div>
     `;
   }
+
+
+  for (let i = 0; i < team.length; i++) {
+    if (team[i].getRole() === "Manager") {
+      generateManager(team[i]);
+    }
+    if (team[i].getRole() === "Engineer") {
+      generateEngineer(team[i]);
+    }
+    if (team[i].getRole() === "Employee") {
+      generateEmployee(team[i]);
+    }
+    if (team[i].getRole() === "Intern" ) {
+      generateIntern(team[i]);
+    }
+  }
+
 };
+
 
