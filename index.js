@@ -6,9 +6,6 @@ const Manager = require("./lib/Manager");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateProfile = require("./src/generateProfile");
-const path = require("path");
-const DIST_DIR = path.resolve(__dirname, "dist");
-const distpath = path.join(DIST_DIR, index.html);
 const roundTable = [];
 
 
@@ -261,10 +258,14 @@ const promptIntern = () => {
 };
 
 const assembleAvengers = () => {
-   if (!fs.existsSync(DIST_DIR)) {
-      fs.mkdirSync(DIST_DIR);
-   }
-   fs.writeFileSync(distpath, generateProfile(roundTable), "utf-8");
+   let teamData = generateProfile();
+   fs.writeFile("./dist/index.html", teamData, (err) => {
+      if(err) {
+         console.error(err);
+      } else {
+         console.log("Mission Complete!");
+      }
+   })
 };
 
 promptManager();
