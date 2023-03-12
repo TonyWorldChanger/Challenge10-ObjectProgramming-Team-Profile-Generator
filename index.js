@@ -1,3 +1,7 @@
+const Employee = require("./lib/Employee");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const Manager = require("./lib/Manager");
 
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
@@ -15,21 +19,28 @@ const promptUser = () => {
             if (nameInput) {
                return true;
             } else {
+               console.log("Please enter your full name!");
                return false;
             }
          }
       },
+      {
+         type: "input",
+         name: "employeeId",
+         message: "Enter your employee ID",
+         validate: employeeId => {
+            if (employeeId) {
+               return
+            }
+         }
+      }
 
    ])
 }
 
 // TODO: Create an array of questions for user input
 const questions = [
-    {
-       type:"input",
-       name:"name",
-       message:"What is the employee's name?", 
-    },
+   
     {
         type:"input",
         name:"id",
