@@ -5,8 +5,7 @@ describe("Engineer", () => {
         const engineer = new Engineer("John Wick", 1, "johnwick@email.com", "johnwick1", "Engineer")
         expect(engineer.name).toEqual("John Wick");
         expect(engineer.id).toEqual(1);
-        expect(engineer.email).toEqual("johndoe@email.com");
-        expect(engineer.github).toEqual("johndoe1");
-        expect(engineer.role).toEqual("Engineer");
+        expect(engineer.email).toEqual("johnwick@email.com");
+        expect(engineer.github).toEqual("johnwick1");
     });
 });

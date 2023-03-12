@@ -6,7 +6,7 @@ const Intern = require("../lib/Intern");
             const intern = new Intern("John Wick", 1, "johnwick@email.com", "University of Wick")
             expect(intern.name).toEqual("John Wick");
             expect(intern.id).toEqual(1);
-            expect(intern.email).toEqual("johnwick@wmail.com");
+            expect(intern.email).toEqual("johnwick@email.com");
             expect(intern.school).toEqual("University of Wick");
         });
      });

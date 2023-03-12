@@ -7,7 +7,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateProfile = require("./src/generateProfile");
 const path = require("path");
-const DIST_DIR = path.resolve(_dirname, "dist");
+const DIST_DIR = path.resolve(__dirname, "dist");
 const distpath = path.join(DIST_DIR, index.html);
 const roundTable = [];
 
