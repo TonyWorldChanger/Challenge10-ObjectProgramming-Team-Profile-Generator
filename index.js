@@ -7,9 +7,12 @@ const Manager = require("./lib/Manager");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateProfile = require("./src/generateProfile");
-const allUser = [];
+const { off } = require("process");
+const roundTable = [];
 
-const promptUser = () => {
+
+// TODO: Create an array of questions for user input
+const promptEmployee = () => {
    inquirer.prompt([
       {
          type:"input",
@@ -30,43 +33,97 @@ const promptUser = () => {
          message: "Enter your employee ID",
          validate: employeeId => {
             if (employeeId) {
-               return
+               return true;
+            } else {
+               console.log("Please enter employee ID");
+               return false;
+            }
+         }
+      },
+   ]).then(answers => {
+      console.log(answers);
+      const employee = new Employee(answers.name, answers.employeeId);
+      roundTable.push(employee);
+   })
+};
+
+const promptManager = () => {
+   inquirer.prompt([
+      {
+         type:"input",
+         name:"name",
+         message:"What is the employee's name?", 
+         validate: nameInput => {
+            if (nameInput) {
+               return true;
+            } else {
+               console.log("Please enter your full name!");
+               return false;
+            }
+         }
+      },
+      {
+         type: "input",
+         name: "employeeId",
+         message: "Enter your employee ID",
+         validate: employeeId => {
+            if (employeeId) {
+               return true;
+            } else {
+               console.log("Please enter employee ID");
+               return false;
+            }
+         }
+      },
+      {
+         type: "input",
+         name: "officeNumber",
+         message: "Enter your current office number",
+         validate: officeNumber => {
+            if (officeNumber) {
+               return true;
+            } else {
+               console.log("Please enter your current office number");
+               return false;
             }
          }
       }
+   ]).then(answers => {
+      console.log(answers);
+      const manager = new manager(answers.name, answers.employeeId, answers.email, answers.officeNumber);
+      roundTable.push(manager);
+      promptTeamMenu();
+   })
+};
 
-   ])
-}
+const promptTeamMenu = () => {
+   return inquirer.prompt([
+      {
+         type: "list",
+         name: "Role Menu",
+         message: "Please select correct option:",
+         options: ["employee", "engineer", "intern", "complete creating Avengers"]
+      }
+   ]).then(userOptions => {
+      switch (userOptions.menu) {
+         case "employee":
+            promptEmployee();
+            break;
+         case "engineer":
+            promptEngineer();
+            break;
+         case "intern":
+            promptIntern();
+            break;
+         default:
+            assembleAvenger();
 
-// TODO: Create an array of questions for user input
-const questions = [
-   
-    {
-        type:"input",
-        name:"id",
-        message:"What is the employee's ID?", 
-     },
-     {
-        type:"input",
-        name:"email",
-        message:"What is the employee's email?", 
-     },
-     {
-        type:"input",
-        name:"role",
-        message:"What is the employee's role?", 
-     },
-     {
-        type:"input",
-        name:"GitHub",
-        message:"GitHub username: ",
-     },
-     {
-        type:"input",
-        name:"school",
-        message:"What school does the employee attend?",
-     },
-];
+      }
+   });
+};
+
+
+
 
 function writeToFile(fileName, data) {
     if (!fs.existsSync(DIST_DIR)) {
