@@ -1,10 +1,10 @@
-const html = [];
 
 const generateTeam = (team) => {
+  let p = " ";
   console.log(team);
   // creates the manager html
   const generateManager = manager => {
-    return `
+    `
     <div class="card employee-card">
      <div class="card-header">
         <h2 class="card-title">${manager.getName()}</h2>
@@ -24,7 +24,7 @@ const generateTeam = (team) => {
 
 // creates the engineer html
   const generateEngineer = engineer => {
-    return `
+    `
     <div class="card employee-card">
      <div class="card-header">
         <h2 class="card-title">${engineer.getName()}</h2>
@@ -43,7 +43,7 @@ const generateTeam = (team) => {
 
   // creates the employee html
   const generateEmployee = employee => {
-    return `
+    `
     <div class="card employee-card">
      <div class="card-header">
         <h2 class="card-title">${employee.getName()}</h2>
@@ -60,7 +60,7 @@ const generateTeam = (team) => {
   }
 
   const generateIntern = intern => {
-    return `
+    `
     <div class="card employee-card">
      <div class="card-header">
         <h2 class="card-title">${intern.getName()}</h2>
@@ -93,6 +93,31 @@ const generateTeam = (team) => {
     }
   }
 
+
+
+  const html = 
+    `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kumbh Sans">
+        <link rel="stylesheet" href="styles.css">
+        <title>Team Database</title>
+    </head>
+      <body>
+      <div class="header-bar"><h1>Employee Database</h1></div>
+       <div class="employee-container droppable">
+          ${p}
+        </div>
+      </body>
+    </html>`
+
+      return html;
+
 };
 
+
+module.exports = generateTeam;
 

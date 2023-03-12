@@ -63,7 +63,7 @@ function writeToFile(fileName, data) {
     }
     fs.writeFileSync(disPath, render(teamMembers), "utf-8");
 
-    return fs.writeFileSync(generateProfile.html, fileName), data;
+    return fs.writeFileSync(index.html, fileName), data;
 };
 
 
