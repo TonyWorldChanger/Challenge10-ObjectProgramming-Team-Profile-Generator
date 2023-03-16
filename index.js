@@ -113,7 +113,7 @@ const promptTeamMenu = () => {
          type: "list",
          name: "Role Menu",
          message: "Please select correct option:",
-         options: ["employee", "engineer", "intern", "complete creating Avengers"]
+         choices: ["employee", "engineer", "intern", "complete creating Avengers"]
       }
    ]).then(userOptions => {
       switch (userOptions.menu) {
