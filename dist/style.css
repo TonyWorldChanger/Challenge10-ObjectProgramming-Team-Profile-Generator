@@ -1,91 +1,43 @@
 
-*{
-    font-family: 'Kumbh Sans';
-}
-
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-
-}
-
-.header-bar {
-    width: 100vw;
-    height: 13vh;
-    background-color: rgba(236, 63, 63, 0.813);
-    margin-bottom: 4%;
-    padding-bottom: 1.1%;
+header {
+    color: white;
+    background-color: rgba(255, 0, 0, 0);
+    padding: 10px;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    margin: 15px;
+    padding: 10px;
 }
 
-h1 {
-    margin: 0 auto;
-    color: #fff;
-}
-
-.employee-container {
-    width: 80%;
-    height: 60%;
-    margin: 0 auto;
+main{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    margin: 15px;
+    padding: 10px;
 }
 
-.employee-card{
-    height:45%;
-    width: 20%;
-    background-color: #fff;
-    border: 2px solid rgba(71, 69, 69, 0.63);
-    border-radius: 16px;
-    margin-bottom: 12px;
+.card {
+    padding: 10px;
+    margin: 15px;
 }
 
-.employee-card:hover {
-    width: 21%;
-    height: 46%;
-    box-shadow: 5px 8px #797777a7;
-    cursor: pointer;
+.card-header {
+    color: white;
+    background-color: red;
+
 }
 
-.employee-info {
-    padding-left: 3%;
-    padding-top: 2%;
-    font-size: 0.9em;
+.list-group {
+    color: black;
 }
 
-.title-container{
-    color: #fff;
-    height: auto;
-    text-align: center;
-    background-color: rgba(236, 63, 63, 0.813);
-    border-bottom: 1px solid rgba(97, 94, 94, 0.539);
-    padding-top: 1px;
-    border-radius: 10px 10px 0 0;
+
+.list-group-item {
+    white-space: nowrap;
+    overflow: visible;
 }
 
-.title{
-    font-size: 2rem;
-    margin: 0;
-    padding: 0;
+#email {
+    color:rgba(0, 0, 255, 0.584);
 }
-
-.role{
-    font-size: 1.3rem;
-    margin: 0;
-    padding-bottom: 3%;
-}
-
-a:hover {
-    font-size: 1.2rem;
-}
-

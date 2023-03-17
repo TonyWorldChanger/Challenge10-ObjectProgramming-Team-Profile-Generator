@@ -10,43 +10,8 @@ const roundTable = [];
 
 
 // TODO: Create an array of questions for user input
-const promptEmployee = () => {
-   inquirer.prompt([
-      {
-         type:"input",
-         name:"name",
-         message:"What is the employee's name?", 
-         validate: nameInput => {
-            if (nameInput) {
-               return true;
-            } else {
-               console.log("Please enter your full name!");
-               return false;
-            }
-         }
-      },
-      {
-         type: "input",
-         name: "employeeId",
-         message: "Enter your employee ID",
-         validate: employeeId => {
-            if (employeeId) {
-               return true;
-            } else {
-               console.log("Please enter employee ID");
-               return false;
-            }
-         }
-      },
-   ]).then(answers => {
-      console.log(answers);
-      const employee = new Employee(answers.name, answers.employeeId);
-      roundTable.push(employee);
-   })
-};
-
 const promptManager = () => {
-   inquirer.prompt([
+    inquirer.prompt([
       {
          type:"input",
          name:"name",
@@ -104,19 +69,19 @@ const promptManager = () => {
       const manager = new Manager(answers.name, answers.employeeId, answers.email, answers.officeNumber);
       roundTable.push(manager);
       promptTeamMenu();
-   })
+   });
 };
 
 const promptTeamMenu = () => {
    return inquirer.prompt([
       {
          type: "list",
-         name: "Role Menu",
+         name: "menu",
          message: "Please select correct option:",
-         choices: ["employee", "engineer", "intern", "complete creating Avengers"]
+         choices: ["employee","engineer", "intern", "complete creating Avengers"]
       }
-   ]).then(userOptions => {
-      switch (userOptions.menu) {
+   ]).then(userChoice => {
+      switch (userChoice.menu) {
          case "employee":
             promptEmployee();
             break;
@@ -134,7 +99,7 @@ const promptTeamMenu = () => {
 };
 
 const promptEngineer = () => {
-   inquirer.prompt([
+    inquirer.prompt([
       {
          type:"input",
          name:"name",
@@ -256,10 +221,60 @@ const promptIntern = () => {
       promptTeamMenu();
    })
 };
+const promptEmployee = () => {
+   inquirer.prompt([
+     {
+        type:"input",
+        name:"name",
+        message:"What is the employee's name?", 
+        validate: nameInput => {
+           if (nameInput) {
+              return true;
+           } else {
+              console.log("Please enter your full name!");
+              return false;
+           }
+        }
+     },
+     {
+        type: "input",
+        name: "employeeId",
+        message: "Enter your employee ID",
+        validate: employeeId => {
+           if (employeeId) {
+              return true;
+           } else {
+              console.log("Please enter employee ID");
+              return false;
+           }
+        }
+     },
+     {
+        type: "input",
+        name: "email",
+        message: "Enter your email address",
+        validate: email => {
+           if (email) {
+              return true;
+           } else {
+              console.log("Please enter email address");
+              return false;
+           }
+        }
+     },
+     
+  ]).then(answers => {
+     console.log(answers);
+     const employee = new Employee(answers.name, answers.employeeId, answers.email);
+     roundTable.push(employee);
+     promptTeamMenu();
+  })
+};
+
 
 const assembleAvengers = () => {
-   let teamData = generateProfile();
-   fs.writeFile("./dist/index.html", teamData, (err) => {
+   const teamData = generateProfile(roundTable);
+   fs.writeFileSync("./dist/index.html", teamData, (err) => {
       if(err) {
          console.error(err);
       } else {
@@ -269,6 +284,7 @@ const assembleAvengers = () => {
 };
 
 promptManager();
+
 
 
 

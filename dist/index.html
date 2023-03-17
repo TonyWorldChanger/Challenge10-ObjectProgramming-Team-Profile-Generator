@@ -1,55 +1,55 @@
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kumbh Sans">
-        <link rel="stylesheet" href="styles.css">
-        <title>Team Database</title>
-    </head>
-    <body>
-        <div class="header-bar"><h1>Employee Database</h1></div>
-        <div class="employee-container droppable">
-        <div class="employee-card draggable">
-            <div class="title-container">
-                <h2 class="title">Test One</h2>
-                <h3 class="role">Engineer</h3>
-            </div>
-            <div class="employee-info">
-            <p>ID: 1</p>
-            <p>Email: <a href="mailto:test@yahoo.com">test@yahoo.com</a>
-            
-            
-            <p>Github:<a href="https://github.com/TonyWorldChanger">TonyWorldChanger</a></p>
-        </div>
-        </div>
-        <div class="employee-card draggable">
-            <div class="title-container">
-                <h2 class="title">Test Two</h2>
-                <h3 class="role">Intern</h3>
-            </div>
-            <div class="employee-info">
-            <p>ID: 2</p>
-            <p>Email: <a href="mailto:test@yahoo.com">test@yahoo.com</a>
-            
-            <p>School: School</p>
-            
-        </div>
-        </div>  
-        <div class="employee-card draggable">
-            <div class="title-container">
-                <h2 class="title">Test Three</h2>
-                <h3 class="role">Manager</h3>
-            </div>
-            <div class="employee-info">
-            <p>ID: 3</p>
-            <p>Email: <a href="mailto:test@yahoo.com">test@yahoo.com</a>
-            <p>Office Number: 123</p> 
-        </div>
-        </div>
-        </div>
-    </body>
-    </html>
 
-
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/1e0a13a89f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../dist/style.css" />
+  <title>Team Profile Generator</title>
+</head>
+<body>
+  <header>
+  <h1> My Team </h1>
+  </header>
+  <main>  
+      <div class="card" style="width: 18rem;">
+          <div class="card-header">
+         John Wick <br/>
+         <i class="fas fa-mug-hot"></i>Manager</div>
+         <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: 007</li>
+          <li class="list-group-item">Email: <span id="email"><a href="mailto:undefined">starktech@yahoo.com</a></span></li>
+          <li class="list-group-item">Office Number: 2143</li>
+          </ul>
+      </div>
+       
+      <div class="card" style="width: 18rem;">
+          <div class="card-header">
+         Black Widow <br/>
+         <i class="fas fa-glasses"></i>Engineer</div>
+         <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: 612</li>
+          <li class="list-group-item">Email: <span id="email"><a href="mailto:undefined">starktech@yahoo.com</a></span></li>
+          <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com/undefined">assistifNeeded</a></li>
+          </ul>
+      </div>
+       
+      <div class="card" style="width: 18rem;">
+          <div class="card-header">
+         Tony Stark <br/>
+         <i class="fas fa-user-graduate"></i>Intern</div>
+         <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: 456</li>
+          <li class="list-group-item">Email: <span id="email"><a href="mailto:undefined">starktech@yahoo.com</a></span></li>
+          <li class="list-group-item">School: Stark Tech</li>
+          </ul>
+      </div>
+       </main>
+   
+</body>
+</html>
+  
