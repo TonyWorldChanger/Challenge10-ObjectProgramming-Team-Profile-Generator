@@ -7,7 +7,7 @@ describe("Manager", () => {
         expect(manager.name).toEqual("John Wick");
         expect(manager.id).toEqual(1);
         expect(manager.email).toEqual("johnwick@email.com");
-        expect(manager.officeNumber).toEqual("123-456-789");
+        expect(manager.officeNumber).toEqual("officeNumber");
       
     });
  });

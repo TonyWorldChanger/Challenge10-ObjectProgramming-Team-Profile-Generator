@@ -1,6 +1,7 @@
 const Employee = require("../lib/Employee");
 
 
+
 describe("Employee", () => {
     it("creates an Employee object with the correct properties", () => {
         const employee = new Employee("John Wick", 1, "johnwick@email.com");

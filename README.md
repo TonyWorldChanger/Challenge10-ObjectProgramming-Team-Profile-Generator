@@ -30,7 +30,17 @@ WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 
 
+## Installation
+You will need to have node ja and inquirer installed to generate your team profile.
 
+## Usage
+
+[Github Page Address]
+
+To verify if the test work you will need to run "npm test". All 4 test should pass, this test is testing all team memebers. To generate your team, you will need to use the "node index.js" command to prompt the app. Once you've entered your information, then you will be able to select which team member you are trying to add next. This will generate a team profile webpage. "Please do an npm i before you run the test."
+
+### ScreenShot of Challenge
+![Challen10]
 
 
 
